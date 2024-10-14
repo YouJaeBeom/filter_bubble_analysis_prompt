@@ -1,0 +1,7 @@
+Input: 
+{{
+  "query": {query},
+  "title": {title},
+  "detail_context": {detail_context}
+}}
+Output: 

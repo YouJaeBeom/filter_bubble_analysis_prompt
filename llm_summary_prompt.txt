@@ -1,0 +1,104 @@
+
+LLM Summary Prompt
+
+Background
+The provided single dataset file contains search results reflecting various user contexts for the search query "{query}", along with LLM analysis results. The dataset structure includes columns such as title, content, url, Political_Label, Political_Score, Stance_Label, Stance_Score, Subjectivity_Label, Subjectivity_Score, Sentiment_Label, Sentiment_Score, Bias_Label, Bias_Score, and user_context_instance.
+
+User context instances are categorized as follows:
+
+- Geolocation:
+  - US Ohio (us-east-2): User residing in Ohio, USA
+  - US California (us-west-1): User residing in California, USA
+  - South Korea Seoul (ap-northeast-2): User residing in Seoul, South Korea
+  - Japan Tokyo (ap-northeast-1): User residing in Tokyo, Japan
+  - UK London (eu-west-2): User residing in London, UK
+  - France Paris (eu-west-3): User residing in Paris, France
+
+- User Environment:
+  - Chrome & Windows OS: Chrome browser on Windows
+  - Chrome & Android OS: Chrome browser on Android
+  - Edge & Mac OS: Edge browser on Mac OS
+  - Edge & Windows OS: Edge browser on Windows
+  - Safari & iPhone OS: Safari browser on iPhone
+  - Safari & Mac OS: Safari browser on Mac OS
+
+- User Language:
+  - US English (en-US): User preferring US English
+  - UK English (en-GB): User preferring UK English
+  - Japanese and English (ja-JP, en): User preferring Japanese and English
+  - Korean and English (ko-KR, en): User preferring Korean and English
+  - French and English (fr-FR, en): User preferring French and English
+  - Chinese and English (zh-CN, en): User preferring Chinese and English
+
+- Search History:
+  - neutral_10: User with 10 accumulated Neutral stance searches on {specific topic}
+  - neutral_30: User with 30 accumulated Neutral stance searches on {specific topic}
+  - neutral_50: User with 50 accumulated Neutral stance searches on {specific topic}
+  - support_10: User with 10 accumulated Support stance searches on {specific topic}
+  - support_30: User with 30 accumulated Support stance searches on {specific topic}
+  - support_50: User with 50 accumulated Support stance searches on {specific topic}
+  - oppose_10: User with 10 accumulated Oppose stance searches on {specific topic}
+  - oppose_30: User with 30 accumulated Oppose stance searches on {specific topic}
+  - oppose_50: User with 50 accumulated Oppose stance searches on {specific topic}
+
+Analysis targets include:
+- Political: Analysis of political orientation
+- Stance: Analysis of support, opposition, or neutrality towards {specific topic}
+- Sentiment: Analysis of positive, negative, or neutral sentiment towards {specific topic}
+- Subjectivity: Analysis of objectivity or subjectivity regarding {query}
+- Bias: Analysis of bias or non-bias regarding {query}
+
+Filter Bubble Definition
+A filter bubble is defined as the tendency for search results to show different analytical perspectives based on different user context instances.
+
+Analysis Guidelines
+1. Data Overview and User Context Analysis
+   - Identify the total size of the dataset and the number of unique user context instances.
+   - Summarize the data distribution for each user context instance.
+   - Infer how the characteristics of each user context instance might influence search results.
+
+2. Analysis of Each Analytical Perspective
+   - For each analytical perspective (Political, Stance, Sentiment, Subjectivity, Bias):
+     1. Summarize the overall distribution.
+     2. Analyze differences in distribution across user context instances.
+     3. Identify and explain any notable trends in specific user context instances, relating them to the characteristics of those contexts.
+
+3. Key Content Analysis
+   - Identify the most frequent or characteristic content (title, content) for each user context instance.
+   - Briefly summarize the content, tone, and perspective of these key pieces.
+   - Analyze the impact of this content on the overall trend of the user context instance and explain its relevance to the user context.
+
+4. Comparative Analysis Between User Context Instances
+   - Compare and analyze differences in each analytical perspective between different user context instances.
+   - Observe changes in search result diversity, bias, and scope of {query} across user context instances, explaining these in relation to the characteristics of each context.
+
+5. Filter Bubble Phenomenon Analysis
+   - Analyze whether differences in analytical perspectives across user context instances suggest the presence of filter bubbles.
+   - Estimate the correlation between user context instance characteristics and filter bubble strength, explaining how each context might contribute to filter bubble formation.
+
+6. Overall Implications
+   - Derive 3-5 overall implications for filter bubble research, presenting them in the following format:
+     - [Implication 1 Title] [Implication 1 Description]
+     - [Implication 2 Title] [Implication 2 Description]
+     - [Implication 3 Title] [Implication 3 Description]
+
+Precautions
+- Emphasize that all conclusions and insights are tentative and require further research.
+- Use expressions like "there is a possibility that..." or "a tendency is observed...".
+- Avoid definitive conclusions and focus on explaining observed tendencies.
+- Interpret and explain results considering the characteristics of each user context.
+
+Result Format
+- Data Overview and User Context Analysis
+- Analysis Results for Each Analytical Perspective
+- Key Content Analysis Results
+- Comparative Analysis Results Between User Context Instances
+- Analysis of Filter Bubble Phenomenon
+- Overall Implications (3-5 points)
+
+Example: Overall Implications for Filter Bubble Research
+- Potential Political Bias Based on User Context: In user context instance A (conservative news consumption pattern), there tends to be a higher proportion of conservative viewpoint articles about {topic}. This suggests that the user's existing news consumption pattern may influence the search algorithm to expose more articles with similar viewpoints.
+
+- Diversity Changes in {query} by User Context: Comparing user context B (pattern of exploring diverse fields of information) and C (search pattern focused on specific {query}), B tends to show more diverse {query} in search results. This suggests that the user's broad interests may increase the diversity of search results.
+
+- Relationship Between Context Intensity and Filter Bubble: As the characteristics of the user context become stronger (e.g., D - frequent search history for a specific politician), there is a tendency for a higher proportion of content matching that context. This suggests that repetitive user search behavior may strengthen the filter bubble.
