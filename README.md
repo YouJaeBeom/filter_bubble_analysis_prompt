@@ -4,45 +4,83 @@ This repository contains a set of structured prompts designed for the annotation
 
 ## Files Overview
 
-1. **search_history_prompt.txt**  
-   - **Description:**  
-     This prompt defines guidelines for creating search history queries reflecting different user perspectives (supportive, neutral, opposing) for a given topic. The objective is to simulate diverse viewpoints to study search result behaviors.  
-   - **Key Elements:**  
-     - Definition of perspectives (Support, Neutral, Oppose)  
-     - Examples for topics like *Climate Change* and *Healthcare Reform*  
-     - Instructions for generating 50 search history terms per perspective
+### 1. **search_history_prompt.txt**
 
-2. **llm_summary_prompt.txt**  
-   - **Description:**  
-     This prompt provides detailed instructions for summarizing LLM-analyzed search result datasets. It explains how to categorize and analyze user contexts and filter bubble tendencies based on search query results.  
-   - **Key Elements:**  
-     - User context instances (Geolocation, Language, Device Environment)  
-     - Definition of analysis targets (Political, Stance, Sentiment, Subjectivity, Bias)  
-     - Guidelines for conducting comparative analysis and deriving filter bubble implications  
+- **Description:**
+    
+    This prompt defines guidelines for creating search history queries reflecting different user perspectives (supportive, neutral, opposing) for a given topic. The objective is to simulate diverse viewpoints to study search result behaviors.
+    
+- **Key Elements:**
+    - Definition of perspectives (Support, Neutral, Oppose)
+    - Examples for topics like *Climate Change* and *Healthcare Reform*
+    - Instructions for generating 50 search history terms per perspective
 
-3. **llm_annotation_role_prompt.txt**  
-   - **Description:**  
-     This prompt outlines the responsibilities of professional annotators who label articles based on criteria such as political leanings, sentiment, and subjectivity. It provides instructions for consistent and nuanced labeling using decimal scores to reflect intensity.  
-   - **Key Elements:**  
-     - Labeling guidelines for five criteria (Political, Stance, Sentiment, Subjectivity, Bias)  
-     - Output in JSON format  
-     - Example annotations for topics like *Biden*, *Trump*, and *Immigration*  
+### 2. **llm_summary_prompt.txt**
 
-4. **llm_annotation_request_prompt.txt**  
-   - **Description:**  
-     This file serves as a template for structuring input and output during the annotation process. It ensures uniformity in annotation requests and responses by defining the input format (query, title, and context) and requiring JSON-based outputs.  
-   - **Key Elements:**  
-     - Input structure: `{query}`, `{title}`, `{detail_context}`  
-     - Placeholder for JSON output with labels and scores  
+- **Description:**
+    
+    This prompt provides detailed instructions for summarizing LLM-analyzed search result datasets. It explains how to categorize and analyze user contexts and filter bubble tendencies based on search query results.
+    
+- **Key Elements:**
+    - User context instances (Geolocation, Language, Device Environment)
+    - Definition of analysis targets (Political, Stance, Sentiment, Subjectivity, Bias)
+    - Guidelines for conducting comparative analysis and deriving filter bubble implications
+
+### 3. **prompt_role_supportive_left.txt**
+
+- **Description:**
+    
+    This prompt defines the persona of a user who supports left-leaning perspectives. Annotators label articles based on criteria such as political leanings, sentiment, subjectivity, and bias while reflecting this persona.
+    
+- **Key Elements:**
+    - Labeling guidelines for four criteria (Political, Stance, Subjectivity, Bias)
+    - Output in JSON format
+    - Examples for topics like *Biden*, *Trump*, and *Immigration*
+
+### 4. **prompt_role_supportive_right.txt**
+
+- **Description:**
+    
+    This prompt defines the persona of a user who supports right-leaning perspectives. Annotators label articles based on criteria such as political leanings, sentiment, subjectivity, and bias while reflecting this persona.
+    
+- **Key Elements:**
+    - Labeling guidelines for four criteria (Political, Stance, Subjectivity, Bias)
+    - Output in JSON format
+    - Examples for topics like *Biden*, *Trump*, and *Immigration*
+
+### 5. **prompt_role_opposed_left.txt**
+
+- **Description:**
+    
+    This prompt defines the persona of a user who opposes left-leaning perspectives. Annotators label articles based on criteria such as political leanings, sentiment, subjectivity, and bias while reflecting this persona.
+    
+- **Key Elements:**
+    - Labeling guidelines for four criteria (Political, Stance, Subjectivity, Bias)
+    - Output in JSON format
+    - Examples for topics like *Biden*, *Trump*, and *Immigration*
+
+### 6. **prompt_role_opposed_right.txt**
+
+- **Description:**
+    
+    This prompt defines the persona of a user who opposes right-leaning perspectives. Annotators label articles based on criteria such as political leanings, sentiment, subjectivity, and bias while reflecting this persona.
+    
+- **Key Elements:**
+    - Labeling guidelines for four criteria (Political, Stance, Subjectivity, Bias)
+    - Output in JSON format
+    - Examples for topics like *Biden*, *Trump*, and *Immigration*
 
 ## Usage
 
-1. **Search History Simulation:**  
-   Use `search_history_prompt.txt` to create hypothetical search queries reflecting multiple viewpoints on topics of interest. These can help study the influence of search engine algorithms on results based on user perspectives.
+### 1. **Search History Simulation**
 
-2. **LLM-Based Summary and Analysis:**  
-   Utilize `llm_summary_prompt.txt` for summarizing datasets by categorizing user behaviors, analyzing political and sentiment-based trends, and investigating filter bubble formation.
+Use `search_history_prompt.txt` to create hypothetical search queries reflecting multiple viewpoints on topics of interest. These can help study the influence of search engine algorithms on results based on user perspectives.
 
-3. **Annotation Tasks:**  
-   - Refer to `llm_annotation_role_prompt.txt` to annotate news articles based on five analytical criteria with detailed scoring and labeling.
-   - Use `llm_annotation_request_prompt.txt` as a template for structuring input and generating JSON-based annotation outputs.
+### 2. **LLM-Based Summary and Analysis**
+
+Utilize `llm_summary_prompt.txt` for summarizing datasets by categorizing user behaviors, analyzing political and sentiment-based trends, and investigating filter bubble formation.
+
+### 3. **Annotation Tasks**
+
+- Refer to `prompt_role_supportive_left.txt`, `prompt_role_supportive_right.txt`, `prompt_role_opposed_left.txt`, and `prompt_role_opposed_right.txt` to annotate news articles based on the defined personas.
+- These prompts provide tailored instructions for consistent and nuanced labeling, enabling analysis of diverse perspectives.
