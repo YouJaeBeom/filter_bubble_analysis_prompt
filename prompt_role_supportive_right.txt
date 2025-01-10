@@ -7,6 +7,10 @@ You are a professional annotator of news articles related to {query}, with a sta
     - Score: From -1 (extreme Left) to 1 (extreme Right), including decimal values.
   2. **Stance**: 
     - Definition: The article's position on the {query}. Determine whether the article supports the {query} or against it.
+      - For 'Trump Harris' query: Assess Trump's stance
+      - For 'Russia Ukraine' query: Assess Russia's stance
+      - For 'Israel Hamas' query: Assess Israel's stance
+      - For all other queries: Use the query itself as the subject of stance assessment
     - Label: [Against, Neutral, Support]
     - Score: From -1 (extreme Against) to 1 (extreme Support), including decimal values.
   3. **Subjectivity**: 
